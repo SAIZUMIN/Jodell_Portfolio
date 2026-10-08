@@ -1,0 +1,271 @@
+/* ==========================================
+   PAPER & INK PORTFOLIO - CORE CSS SYSTEM
+   ========================================== */
+
+:root {
+  /* Fonts */
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Courier Prime', monospace;
+
+  /* Color Palette - LIGHT MODE (Clean White Lined Notebook Paper) */
+  --bg-base: #f4f4f5;            /* Clean light grey/white paper canvas */
+  --bg-paper: #ffffff;           /* Pure white paper sheet */
+  --bg-card: #ffffff;            /* Clean white index card */
+  --bg-card-hover: #f9f9fb;      /* Subtle hover white */
+  --bg-input: #eeeeef;           /* Soft light grey input */
+  
+  --text-primary: #1c1d21;       /* Crisp dark charcoal ink */
+  --text-secondary: #555761;     /* Clean graphite text */
+  --text-muted: #888a95;
+
+  --accent: #c85a32;             /* Terracotta accent */
+  --accent-hover: #b04923;
+  --accent-light: #fbeee9;
+  --accent-glow: rgba(200, 90, 50, 0.12);
+
+  --border-paper: rgba(0, 0, 0, 0.08);
+  --border-hand: rgba(0, 0, 0, 0.16);
+
+  --shadow-paper: 0 8px 24px -4px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lift: 0 16px 36px -6px rgba(0, 0, 0, 0.12), 0 4px 10px -2px rgba(0, 0, 0, 0.06);
+
+  --line-grid: rgba(0, 0, 0, 0.08); /* Crisp horizontal ruled lines matching reference */
+  --tape-bg: rgba(225, 225, 230, 0.75);
+  --tape-border: rgba(180, 180, 190, 0.4);
+  --stamp-border: #c85a32;
+  --pin-color: #d94e34;
+}
+
+[data-theme="dark"] {
+  /* Color Palette - DARK MODE (Clean Dark Slate & Charcoal Lined Paper) */
+  --bg-base: #131315;            /* Clean dark matte background */
+  --bg-paper: #1c1c1f;           /* Crisp dark paper sheet */
+  --bg-card: #232327;            /* Clean dark card */
+  --bg-card-hover: #2a2a2f;      /* Slightly lighter dark card hover */
+  --bg-input: #18181b;           /* Dark input background */
+
+  --text-primary: #f3f3f6;       /* Clean bright off-white ink */
+  --text-secondary: #a0a2ad;     /* Muted silver text */
+  --text-muted: #71737e;
+
+  --accent: #e58e65;             /* Terracotta / Amber glow */
+  --accent-hover: #f0aa7d;
+  --accent-light: #34261e;
+  --accent-glow: rgba(229, 152, 102, 0.2);
+
+  --border-paper: rgba(255, 255, 255, 0.08);
+  --border-hand: rgba(255, 255, 255, 0.18);
+
+  --shadow-paper: 0 10px 30px -5px rgba(0, 0, 0, 0.45), 0 2px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lift: 0 20px 50px -8px rgba(0, 0, 0, 0.65), 0 8px 16px -2px rgba(0, 0, 0, 0.4);
+
+  --line-grid: rgba(255, 255, 255, 0.065); /* Crisp horizontal ruled lines on dark */
+  --tape-bg: rgba(55, 55, 62, 0.8);
+  --tape-border: rgba(90, 90, 100, 0.5);
+  --stamp-border: #e59866;
+  --pin-color: #e59866;
+}
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.65;
+  overflow-x: hidden;
+  transition: background-color 450ms ease, color 450ms ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* View Transitions API configuration for seamless theme switching */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
+}
+
+[data-theme="dark"]::view-transition-old(root) {
+  z-index: 9999;
+}
+
+[data-theme="dark"]::view-transition-new(root) {
+  z-index: 1;
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Accessible Focus Ring */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Layout Container */
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section Global Formatting */
+.section {
+  padding: 5.5rem 0;
+  scroll-margin-top: 5rem;
+  position: relative;
+}
+
+.section-header {
+  margin-bottom: 3.5rem;
+  text-align: left;
+}
+
+.section-header.text-center {
+  text-align: center;
+}
+
+.section-header.text-center .section-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-stamp {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  border: 1.5px dashed var(--stamp-border);
+  padding: 0.25rem 0.6rem;
+  border-radius: 3px;
+  margin-bottom: 0.75rem;
+  transform: rotate(-1deg);
+}
+
+.section-title {
+  font-size: 2.75rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 2000;
+  background: transparent;
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, #e07a5f 100%);
+  transition: width 100ms ease-out;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+/* Paper Grain Texture Overlay (Disabled to keep background crystal clear) */
+.paper-grain-overlay {
+  display: none;
+}
+
+/* Ruled / Dotted Lines Overlay */
+.paper-grid-lines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  background-image: linear-gradient(var(--line-grid) 1px, transparent 1px);
+  background-size: 100% 2.2rem;
+}
+
+/* Reveal Animations */
+.reveal-item {
+  opacity: 0;
+  transition: opacity 650ms cubic-bezier(0.16, 1, 0.3, 1), transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-up { transform: translateY(35px); }
+.reveal-down { transform: translateY(-35px); }
+.reveal-left { transform: translateX(35px); }
+.reveal-right { transform: translateX(-35px); }
+
+.reveal-item.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal-item { opacity: 1 !important; transform: none !important; transition: none !important; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
