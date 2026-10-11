@@ -36,7 +36,7 @@ export function ResumeModal({ isOpen, onClose }) {
           {/* Header */}
           <div className="resume-document-header">
             <h1 className="resume-person-name">JODELL D. DOÑOS</h1>
-            <h2 className="resume-person-role">Backend Developer & Frontend Developer</h2>
+            <h2 className="resume-person-role">Backend Developer</h2>
             <p className="resume-contact-bar">
               Cebu City, Philippines &nbsp;|&nbsp; +63 977 387 9813 &nbsp;|&nbsp;{' '}
               <a href="mailto:jodell272@gmail.com">jodell272@gmail.com</a> &nbsp;|&nbsp;{' '}
@@ -53,11 +53,11 @@ export function ResumeModal({ isOpen, onClose }) {
           <div className="resume-section-block">
             <h3 className="resume-section-heading">PROFESSIONAL SUMMARY</h3>
             <p className="resume-body-text">
-              Information Technology student (expected graduation 2027) with hands-on experience building responsive
-              web applications and AI-powered Retrieval-Augmented Generation (RAG) systems. Proficient in React,
-              TypeScript, Python, and modern front-end tooling. Experienced in the full development lifecycle — from
-              requirements analysis and feature implementation to testing, debugging, and collaborative delivery using Git.
-              Eager to contribute to junior web or software developer roles focused on clean, user-centered solutions.
+              Information Technology student (expected graduation 2027) with hands-on experience building full-stack
+              web applications and IoT-based automation systems. Proficient in React, TypeScript, Python, and embedded
+              systems development. Demonstrated ability to deliver end-to-end solutions—from hardware integration and
+              cloud API configuration to responsive front-end interfaces. Seeking junior Backend or full stack developer
+              roles where clean architecture and user-centered design drive impact.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export function ResumeModal({ isOpen, onClose }) {
                 <strong>Bachelor of Science in Information Technology</strong>
                 <div className="resume-sub-text">Cebu Technological University – Argao Campus, Cebu City, Philippines</div>
                 <div className="resume-sub-text">
-                  <em>Relevant Coursework:</em> Web Development, Programming, Database Management, Networking, Data Analytics
+                  <em>Relevant Coursework:</em> Web Development, Object-Oriented Programming, Database Management, Computer Networking, Data Analytics
                 </div>
               </div>
               <div className="resume-date-badge">2023 – 2027 (Expected)</div>
@@ -101,23 +101,42 @@ export function ResumeModal({ isOpen, onClose }) {
           {/* Projects */}
           <div className="resume-section-block">
             <h3 className="resume-section-heading">PROJECTS</h3>
+            
+            {/* EnerSave */}
             <div className="resume-item-row">
               <div>
-                <strong>AI RAG-Powered System</strong> &nbsp;|&nbsp; React, TypeScript, Python, JavaScript, Vite, Git
+                <strong>EnerSave: IoT Smart Energy Management System</strong> — ESP8266, SinricPro, ThingSpeak
               </div>
-              <div className="resume-date-badge">2025 – Present</div>
+              <div className="resume-date-badge">2025</div>
             </div>
-            <ul className="resume-bullet-list">
-              <li>
-                Architected and developed an AI-powered <strong>Retrieval-Augmented Generation (RAG)</strong> system that retrieves relevant knowledge-base documents and generates accurate, context-aware responses.
-              </li>
-              <li>
-                Built interactive, responsive front-end components and user interfaces with <strong>React + TypeScript + Vite</strong>, focusing on clean design, performance, and seamless user experience.
-              </li>
-              <li>
-                Designed, tested, and integrated end-to-end retrieval and AI response workflows, significantly improving answer relevance, system usability, and overall reliability of the application.
-              </li>
-            </ul>
+            <p className="resume-body-text" style={{ margin: '2px 0 8px 0' }}>
+              Motion-activated smart lighting with voice control and live analytics.
+            </p>
+
+            {/* Python Projects Portfolio */}
+            <div className="resume-item-row">
+              <div>
+                <strong>Python Projects Portfolio:</strong> Python, OOP, File Handling
+              </div>
+              <div className="resume-date-badge">2025–Present</div>
+            </div>
+            <p className="resume-body-text" style={{ margin: '2px 0 8px 0' }}>
+              applications covering banking, inventory, and data management; applied OOP, file I/O, and error handling.{' '}
+              <a href="https://github.com/SAIZUMIN/python-projects" target="_blank" rel="noreferrer">
+                github.com/SAIZUMIN/python-projects
+              </a>
+            </p>
+
+            {/* AI RAG-Powered Knowledge System */}
+            <div className="resume-item-row">
+              <div>
+                <strong>AI RAG-Powered Knowledge System:</strong> React, TypeScript, Python, Vite
+              </div>
+              <div className="resume-date-badge">2025–Present</div>
+            </div>
+            <p className="resume-body-text" style={{ margin: '2px 0 0 0' }}>
+              RAG system with React front end for document retrieval and context-aware AI responses.
+            </p>
           </div>
 
           {/* Certification */}
@@ -132,11 +151,12 @@ export function ResumeModal({ isOpen, onClose }) {
           <div className="resume-section-block">
             <h3 className="resume-section-heading">TECHNICAL SKILLS</h3>
             <ul className="resume-skills-list">
-              <li><strong>Web Development:</strong> React, TypeScript, JavaScript, HTML, CSS, Vite</li>
-              <li><strong>Programming:</strong> Python, Java, C++ (Basic)</li>
-              <li><strong>AI & Data:</strong> Retrieval-Augmented Generation (RAG), AI Applications, Data Analytics, Data Processing</li>
-              <li><strong>Tools & Practices:</strong> Git, Version Control, Software Testing, Debugging, System Analysis, Requirements Analysis, Technical Documentation</li>
-              <li><strong>Networking:</strong> Computer Networking, Network Troubleshooting, Network Configuration</li>
+              <li><strong>Frontend:</strong> React, TypeScript, JavaScript, HTML5, CSS3, Vite</li>
+              <li><strong>Backend & Scripting:</strong> Python, Node.js (Basic), REST APIs</li>
+              <li><strong>IoT & Embedded:</strong> ESP8266 (NodeMCU), Arduino IDE, PIR sensor integration, relay control</li>
+              <li><strong>Cloud & APIs:</strong> SinricPro, ThingSpeak, WebSocket communication</li>
+              <li><strong>Data & AI:</strong> Retrieval-Augmented Generation (RAG), data processing, analytics</li>
+              <li><strong>Tools & Practices:</strong> Git, version control, software testing, debugging, Agile collaboration</li>
             </ul>
           </div>
         </div>

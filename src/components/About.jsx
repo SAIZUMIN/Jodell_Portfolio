@@ -36,7 +36,7 @@ export function About({ personalInfo }) {
                 </div>
                 <div className="polaroid-caption">
                   <span className="caption-text">{personalInfo.name}</span>
-                  <span className="caption-subtext">Backend & Frontend Developer</span>
+                  <span className="caption-subtext">{personalInfo.role}</span>
                 </div>
               </div>
             </div>
@@ -48,13 +48,13 @@ export function About({ personalInfo }) {
               <div className="paper-clip clip-top-left" aria-hidden="true" />
               <div className="card-stamp stamp-outline">CANDIDATE DOSSIER</div>
 
-              <h3 className="bio-heading">Building User-Centered Web Apps & AI RAG Systems</h3>
+              <h3 className="bio-heading">Delivering End-to-End Backend & Full-Stack Systems</h3>
               
               <div className="bio-paragraphs">
                 <p>{personalInfo.shortBio}</p>
                 <p>
-                  Experienced in the full software development lifecycle—from initial requirements analysis and feature implementation 
-                  to unit testing, debugging, and collaborative version control delivery using Git.
+                  Experienced in the full software development lifecycle—from hardware integration and cloud API configuration 
+                  to responsive interfaces, testing, debugging, and collaborative version control using Git.
                 </p>
               </div>
 
@@ -82,7 +82,7 @@ export function About({ personalInfo }) {
                   </div>
                   <div className="spec-item">
                     <span className="spec-label">Core Focus</span>
-                    <span className="spec-value">React, TypeScript, Python, RAG AI</span>
+                    <span className="spec-value">Backend, React, Python, IoT & APIs</span>
                   </div>
                   <div className="spec-item">
                     <span className="spec-label">Experience</span>

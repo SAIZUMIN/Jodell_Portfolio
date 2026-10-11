@@ -9,21 +9,21 @@
 // ==========================================
 export const personalInfo = {
   name: "Jodell D. Doños",
-  role: "Backend & Frontend Developer",
-  tagline: "Building responsive web applications & AI-powered Retrieval-Augmented Generation (RAG) systems with clean architecture.",
-  shortBio: "Information Technology student (expected graduation 2027) at Cebu Technological University with hands-on experience building responsive web apps and AI RAG systems. Proficient in React, TypeScript, Python, and modern web tooling across the full development lifecycle.",
+  role: "Backend Developer",
+  tagline: "Delivering end-to-end solutions—from hardware integration and cloud APIs to responsive web applications.",
+  shortBio: "Information Technology student (expected graduation 2027) with hands-on experience building full-stack web applications and IoT-based automation systems. Proficient in React, TypeScript, Python, and embedded systems development across the full development lifecycle.",
   
   location: "Cebu City, Philippines",
   phone: "+63 977 387 9813",
   email: "jodell272@gmail.com",
   github: "https://github.com/SAIZUMIN/",
-  availability: "Eager for Junior Web / Software Developer Roles",
+  availability: "Seeking Junior Backend or Full Stack Developer Roles",
   education: "B.S. Information Technology (2023 – 2027 Expected) • Cebu Technological University – Argao Campus",
   certification: "National Certificate II (NC II) — TESDA",
   yearsExperience: "April 2025 – Present",
   projectsCompleted: "10+",
   
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/RESUME.pdf",
 };
 
 // ==========================================

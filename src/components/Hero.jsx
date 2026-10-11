@@ -68,7 +68,7 @@ export function Hero({ personalInfo }) {
                 <a
                   href={personalInfo.resumeUrl}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="btn btn-primary"
                   title="Open official Resume PDF in a new tab"
                 >
