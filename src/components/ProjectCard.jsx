@@ -147,6 +147,101 @@ export function ProjectCard({ project, index, isDimmed, isReducedMotion }) {
  */
 function ProjectArtwork({ imageType, title }) {
   switch (imageType) {
+    case 'python-journey':
+      return (
+        <svg viewBox="0 0 340 220" width="100%" height="100%" fill="none" aria-label={title}>
+          <rect width="340" height="220" fill="#1b2028" />
+          {/* Terminal / Code Editor card */}
+          <rect x="25" y="24" width="290" height="172" rx="8" fill="#12151b" stroke="rgba(255,255,255,0.12)" />
+          {/* Window controls */}
+          <circle cx="45" cy="42" r="4.5" fill="#e06c75" />
+          <circle cx="60" cy="42" r="4.5" fill="#e5c07b" />
+          <circle cx="75" cy="42" r="4.5" fill="#98c379" />
+          <text x="100" y="46" fill="#717688" fontSize="10" fontFamily="monospace">journey.py — 31+ Projects</text>
+          
+          {/* Code preview lines */}
+          <text x="45" y="78" fill="#3572A5" fontSize="12" fontFamily="monospace" fontWeight="bold">class</text>
+          <text x="88" y="78" fill="#e5c07b" fontSize="12" fontFamily="monospace" fontWeight="bold">PythonJourney</text>
+          <text x="180" y="78" fill="#abb2bf" fontSize="12" fontFamily="monospace">:</text>
+          
+          <text x="65" y="104" fill="#c678dd" fontSize="12" fontFamily="monospace">def</text>
+          <text x="95" y="104" fill="#61afef" fontSize="12" fontFamily="monospace">__init__</text>
+          <text x="148" y="104" fill="#abb2bf" fontSize="12" fontFamily="monospace">(self, level="OOP"):</text>
+          
+          <text x="85" y="130" fill="#e59866" fontSize="12" fontFamily="monospace">self.milestones = [1..31]</text>
+          <text x="85" y="152" fill="#98c379" fontSize="12" fontFamily="monospace"># Fundamentals → OOP &amp; Files</text>
+
+          {/* Badge */}
+          <rect x="195" y="162" width="105" height="22" rx="4" fill="rgba(53, 114, 165, 0.25)" stroke="#3572A5" strokeWidth="1" />
+          <text x="204" y="177" fill="#61afef" fontSize="10" fontFamily="monospace" fontWeight="bold">✦ 31 LABS BUILT</text>
+        </svg>
+      );
+    case 'enersave-iot':
+      return (
+        <svg viewBox="0 0 340 220" width="100%" height="100%" fill="none" aria-label={title}>
+          <rect width="340" height="220" fill="#0d1816" />
+          
+          {/* NodeMCU ESP8266 & Circuit Board visual container */}
+          <rect x="20" y="18" width="300" height="184" rx="8" fill="#122420" stroke="rgba(16, 185, 129, 0.35)" />
+          
+          {/* Header Bar */}
+          <rect x="20" y="18" width="300" height="28" rx="8" fill="#16312b" />
+          <circle cx="36" cy="32" r="4" fill="#10b981" />
+          <text x="48" y="36" fill="#6ee7b7" fontSize="10" fontFamily="monospace" fontWeight="bold">NODEMCU ESP8266 // ENERSAVE</text>
+          <text x="210" y="36" fill="#a7f3d0" fontSize="9" fontFamily="monospace">PIR + RELAY</text>
+
+          {/* Microcontroller Pinout / Circuit diagram element */}
+          <g transform="translate(32, 56)">
+            {/* ESP8266 Chip */}
+            <rect x="0" y="0" width="110" height="80" rx="4" fill="#0a1513" stroke="#10b981" strokeWidth="1" />
+            <text x="12" y="24" fill="#a7f3d0" fontSize="10" fontFamily="monospace" fontWeight="bold">ESP8266</text>
+            <text x="12" y="40" fill="#7ba096" fontSize="8" fontFamily="monospace">D5 → PIR (GPIO14)</text>
+            <text x="12" y="52" fill="#7ba096" fontSize="8" fontFamily="monospace">D1 → Relay 1</text>
+            <text x="12" y="64" fill="#7ba096" fontSize="8" fontFamily="monospace">D2/D3 → Relay 2/3</text>
+            
+            {/* Microcontroller Pins */}
+            <line x1="-6" y1="20" x2="0" y2="20" stroke="#10b981" strokeWidth="2" />
+            <line x1="-6" y1="36" x2="0" y2="36" stroke="#10b981" strokeWidth="2" />
+            <line x1="-6" y1="52" x2="0" y2="52" stroke="#10b981" strokeWidth="2" />
+            <line x1="-6" y1="68" x2="0" y2="68" stroke="#10b981" strokeWidth="2" />
+          </g>
+
+          {/* Cloud Integrations side panel (SinricPro & ThingSpeak) */}
+          <g transform="translate(155, 56)">
+            {/* SinricPro Box */}
+            <rect x="0" y="0" width="150" height="38" rx="4" fill="#0a1513" stroke="rgba(255,255,255,0.08)" />
+            <circle cx="16" cy="19" r="6" fill="rgba(59, 130, 246, 0.2)" stroke="#3b82f6" strokeWidth="1" />
+            <text x="30" y="16" fill="#93c5fd" fontSize="9" fontFamily="sans-serif" fontWeight="bold">SinricPro Cloud</text>
+            <text x="30" y="28" fill="#64748b" fontSize="8" fontFamily="sans-serif">"Hey Google, turn on Light 1"</text>
+
+            {/* ThingSpeak Analytics Box */}
+            <rect x="0" y="44" width="150" height="38" rx="4" fill="#0a1513" stroke="rgba(255,255,255,0.08)" />
+            <circle cx="16" cy="63" r="6" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" strokeWidth="1" />
+            <text x="30" y="60" fill="#a7f3d0" fontSize="9" fontFamily="sans-serif" fontWeight="bold">ThingSpeak Dashboard</text>
+            <text x="30" y="72" fill="#64748b" fontSize="8" fontFamily="sans-serif">4 Fields Telemetry / 20s Log</text>
+          </g>
+
+          {/* 3 Relay Status Indicator Badges & PIR Motion status */}
+          <g transform="translate(32, 148)">
+            <rect x="0" y="0" width="62" height="26" rx="4" fill="#0b1715" stroke="rgba(16, 185, 129, 0.2)" />
+            <circle cx="10" cy="13" r="3" fill="#10b981" />
+            <text x="18" y="17" fill="#ffffff" fontSize="9" fontFamily="monospace">Light 1</text>
+
+            <rect x="70" y="0" width="62" height="26" rx="4" fill="#0b1715" stroke="rgba(16, 185, 129, 0.2)" />
+            <circle cx="80" cy="13" r="3" fill="#10b981" />
+            <text x="88" y="17" fill="#ffffff" fontSize="9" fontFamily="monospace">Light 2</text>
+
+            <rect x="140" y="0" width="62" height="26" rx="4" fill="#0b1715" stroke="rgba(16, 185, 129, 0.2)" />
+            <circle cx="150" cy="13" r="3" fill="#10b981" />
+            <text x="158" y="17" fill="#ffffff" fontSize="9" fontFamily="monospace">Light 3</text>
+
+            {/* Auto-off / PIR Motion status */}
+            <rect x="210" y="0" width="65" height="26" rx="4" fill="#0b1715" stroke="rgba(229, 152, 102, 0.3)" />
+            <text x="218" y="12" fill="#e59866" fontSize="7.5" fontFamily="monospace">MOTION: ACTIVE</text>
+            <text x="218" y="21" fill="#7ba096" fontSize="7" fontFamily="monospace">10s Auto-Off</text>
+          </g>
+        </svg>
+      );
     case 'wayline':
       return (
         <svg viewBox="0 0 340 220" width="100%" height="100%" fill="none" aria-label={title}>
